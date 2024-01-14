@@ -19,6 +19,10 @@ router.get('/edit-product/:productId', adminController.getEditProduct);
 
 router.post('/edit-product', adminController.postEditProduct);
 
+<<<<<<< HEAD
 // router.post('/delete-product', adminController.postDeleteProduct);
+=======
+router.post('/delete-product', adminController.postDeleteProduct);
+>>>>>>> 4d456e3 (creating user table)
 
 module.exports = router;
