@@ -1,5 +1,8 @@
 const Product = require('../models/product');
+<<<<<<< HEAD
 const Order = require('../models/order');
+=======
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
 
 exports.getProducts = (req, res, next) => {
   Product.find()
@@ -73,7 +76,11 @@ exports.postCart = (req, res, next) => {
 exports.postCartDeleteProduct = (req, res, next) => {
   const prodId = req.body.productId;
   req.user
+<<<<<<< HEAD
     .removeFromCart(prodId)
+=======
+    .deleteItemFromCart(prodId)
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
     .then(result => {
       res.redirect('/cart');
     })
@@ -81,6 +88,7 @@ exports.postCartDeleteProduct = (req, res, next) => {
 };
 
 exports.postOrder = (req, res, next) => {
+<<<<<<< HEAD
   req.user
     .populate('cart.items.productId')
     .execPopulate()
@@ -101,13 +109,24 @@ exports.postOrder = (req, res, next) => {
       return req.user.clearCart();
     })
     .then(() => {
+=======
+  let fetchedCart;
+  req.user
+    .addOrder()
+    .then(result => {
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
       res.redirect('/orders');
     })
     .catch(err => console.log(err));
 };
 
 exports.getOrders = (req, res, next) => {
+<<<<<<< HEAD
   Order.find({ 'user.userId': req.user._id })
+=======
+  req.user
+    .getOrders()
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
     .then(orders => {
       res.render('shop/orders', {
         path: '/orders',

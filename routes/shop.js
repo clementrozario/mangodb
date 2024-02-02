@@ -16,10 +16,18 @@ router.get('/cart', shopController.getCart);
 
 router.post('/cart', shopController.postCart);
 
+<<<<<<< HEAD
 router.post('/cart-delete-item', shopController.postCartDeleteProduct);
 
 router.post('/create-order', shopController.postOrder);
 
 router.get('/orders', shopController.getOrders);
+=======
+// router.post('/cart-delete-item', shopController.postCartDeleteProduct);
+
+// router.post('/create-order', shopController.postOrder);
+
+// router.get('/orders', shopController.getOrders);
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
 
 module.exports = router;

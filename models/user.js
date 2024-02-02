@@ -48,6 +48,7 @@ userSchema.methods.addToCart = function(product) {
   return this.save();
 };
 
+<<<<<<< HEAD
 userSchema.methods.removeFromCart = function(productId) {
   const updatedCartItems = this.cart.items.filter(item => {
     return item.productId.toString() !== productId.toString();
@@ -61,6 +62,8 @@ userSchema.methods.clearCart = function() {
   return this.save();
 };
 
+=======
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
 module.exports = mongoose.model('User', userSchema);
 
 // const mongodb = require('mongodb');
@@ -127,7 +130,11 @@ module.exports = mongoose.model('User', userSchema);
 //             }).quantity
 //           };
 //         });
+<<<<<<< HEAD
 //       
+=======
+//       });
+>>>>>>> 3ea2254e9d2b0da1b28fa58eb2b26caf31a031ad
 //   }
 
 //   deleteItemFromCart(productId) {
